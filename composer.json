@@ -1,0 +1,13 @@
+{
+    "name": "be-flo/access_trait",
+    "description": "This package provides a trait to avoid private/protected",
+    "type": "utility",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian Peters",
+            "email": "fpeters1392@googlemail.com"
+        }
+    ],
+    "require": {}
+}
