@@ -25,7 +25,11 @@ trait AccessTrait
     protected function getVariable(string $variableName, $object, string $alternativeObjectScope = null)
     {
         $boundClosure = \Closure::bind(function () use ($variableName) {
-            return $this->$variableName;
+            $result = null;
+            if(property_exists($this, $variableName)) {
+                $result = $this->$variableName;
+            }
+            return $result;
         }, $object, $alternativeObjectScope ?? $object);
 
         return $boundClosure($variableName);
